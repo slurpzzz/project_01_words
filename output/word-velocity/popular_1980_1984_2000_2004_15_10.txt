@@ -1,0 +1,22 @@
+usr/local/bin/python3.14 /Users/ssvcs/Documents/CSapx/20261/Projects/Words/sol/words.py word-velocity 1980 1984 2000 2004 data/unigrams_popular.csv -t 15 -c 10 
+  Word Velocity Comparison (1980-1984 vs 2000-2004)   
+         Surging Words              Fading Words      
+ ┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓  ┏━━━━━━━━━┳━━━━━━━━━┓ 
+ ┃ Word        ┃      Change ┃  ┃ Word    ┃  Change ┃ 
+ ┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━┩  ┡━━━━━━━━━╇━━━━━━━━━┩ 
+ │ dbms        │ +187548.59% │  │ one     │ -97.78% │ 
+ │ op          │  +59390.79% │  │ t       │ -94.57% │ 
+ │ truvada     │  +40024.49% │  │ year    │ -82.82% │ 
+ │ to          │  +29731.31% │  │ set     │ -78.79% │ 
+ │ sql         │  +10468.12% │  │ action  │ -75.26% │ 
+ │ market      │   +8354.50% │  │ o       │ -72.51% │ 
+ │ e           │   +6498.63% │  │ file    │ -70.02% │ 
+ │ sp          │   +4720.09% │  │ exhibit │ -62.51% │ 
+ │ application │   +3096.21% │  │ sample  │ -62.01% │ 
+ │ alias       │   +2993.11% │  │ m       │ -61.70% │ 
+ │ db          │   +2399.33% │  │ data    │ -52.63% │ 
+ │ no          │   +2044.56% │  │ is      │ -47.13% │ 
+ │ page        │   +1735.24% │  │ name    │ -43.22% │ 
+ │ at          │    +827.93% │  │ max     │ -39.94% │ 
+ │ j           │    +810.75% │  │ state   │ -33.29% │ 
+ └─────────────┴─────────────┘  └─────────┴─────────┘ 

@@ -1,0 +1,9 @@
+/usr/local/bin/python3.14 /Users/ssvcs/Documents/CSapx/20261/Projects/Words/sol/words.py word-velocity 2005 2006 2007 2008 data/unigrams_short.csv -t 3 -c 0 
+    Word Velocity Comparison (2005-2006 vs     
+                  2007-2008)                   
+     Surging Words           Fading Words      
+ ┏━━━━━━━━━━┳━━━━━━━━━┓  ┏━━━━━━━━━┳━━━━━━━━━┓ 
+ ┃ Word     ┃  Change ┃  ┃ Word    ┃  Change ┃ 
+ ┡━━━━━━━━━━╇━━━━━━━━━┩  ┡━━━━━━━━━╇━━━━━━━━━┩ 
+ │ wandered │ +14.97% │  │ request │ -20.52% │ 
+ └──────────┴─────────┘  └─────────┴─────────┘ 

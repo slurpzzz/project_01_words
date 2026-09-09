@@ -1,0 +1,11 @@
+   Top 3 Words by Frequency    
+       Target: 'airport'       
+           Rank: #3            
+        Count: 348,996         
+┏━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┓
+┃ Rank ┃ Word     ┃     Count ┃
+┡━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━┩
+│    1 │ request  │ 2,816,909 │
+│    2 │ wandered │   451,106 │
+│    3 │ airport  │   348,996 │
+└──────┴──────────┴───────────┘

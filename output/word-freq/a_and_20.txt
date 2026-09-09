@@ -1,0 +1,28 @@
+    Top 20 Words by Frequency    
+          Target: 'and'          
+            Rank: #4             
+          Count: 7,286           
+┏━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃ Rank ┃ Word          ┃  Count ┃
+┡━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│    1 │ arcrp         │ 23,598 │
+│    2 │ appfabric     │  9,596 │
+│    3 │ airworthiness │  7,921 │
+│    4 │ and           │  7,286 │
+│    5 │ a             │  6,620 │
+│    6 │ acefrs        │  5,660 │
+│    7 │ alcaldia      │  5,572 │
+│    8 │ albayzar      │  4,771 │
+│    9 │ anglishte     │  4,078 │
+│   10 │ aibileen      │  4,059 │
+│   11 │ appendixes    │  3,821 │
+│   12 │ aringarosa    │  3,776 │
+│   13 │ arkadevich    │  3,749 │
+│   14 │ airspace      │  3,748 │
+│   15 │ akaka         │  3,378 │
+│   16 │ arkadyevitch  │  3,078 │
+│   17 │ annaline      │  3,012 │
+│   18 │ agrayes       │  2,982 │
+│   19 │ atrazine      │  2,884 │
+│   20 │ amaef         │  2,777 │
+└──────┴───────────────┴────────┘

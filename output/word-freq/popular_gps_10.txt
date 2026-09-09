@@ -1,0 +1,18 @@
+       Top 10 Words by Frequency       
+             Target: 'gps'             
+               Rank: #68               
+             Count: 7,566              
+┏━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃ Rank ┃ Word                ┃  Count ┃
+┡━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│    1 │ scholarlyeditionstm │ 78,195 │
+│    2 │ fly                 │ 45,207 │
+│    3 │ scholarlypaper      │ 32,173 │
+│    4 │ clpost              │ 28,291 │
+│    5 │ cltrial             │ 28,051 │
+│    6 │ pobsp               │ 27,165 │
+│    7 │ delinqnt            │ 27,102 │
+│    8 │ workcomp            │ 26,226 │
+│    9 │ ddjbo               │ 26,069 │
+│   10 │ cosponsor           │ 24,618 │
+└──────┴─────────────────────┴────────┘

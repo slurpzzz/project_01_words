@@ -1,0 +1,134 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "words --help",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/words.py",
+      "args": ["--help"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "word-velocity",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/words.py",
+      "args": [
+        "word-velocity",
+        "1980",
+        "1984",
+        "2000",
+        "2004",
+        "data/unigrams_popular.csv",
+        "-t",
+        "15",
+        "-c",
+        "10"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "word-freq",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/words.py",
+      "args": [
+        "word-freq",
+        "fly",
+        "data/unigrams_popular.csv",
+        "-o",
+        "30",
+        "--plot"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "word-count",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/words.py",
+      "args": [
+        "word-count",
+        "computer",
+        "data/unigrams_popular.csv"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "word-length",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/words.py",
+      "args": [
+        "word-length",
+        "-o",
+        "20",
+        "--plot",
+        "1950",
+        "2010",
+        "data/unigrams_popular.csv"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "letter-freq",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/words.py",
+      "args": [
+        "letter-freq",
+        "-o",
+        "26",
+        "--plot",
+        "data/unigrams_popular.csv"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "first-appearance",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/words.py",
+      "args": [
+        "first-appearance",
+        "internet",
+        "10",
+        "data/unigrams_popular.csv"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Demo: rich_demo",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/demos/rich_demo.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/demos"
+    },
+    {
+      "name": "Demo: simple_plot",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/demos/simple_plot.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/demos"
+    },
+    {
+      "name": "Demo: typer_demo --help",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/demos/typer_demo.py",
+      "args": ["--help"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/demos"
+    }
+  ]
+}

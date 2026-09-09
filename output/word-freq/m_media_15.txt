@@ -1,0 +1,23 @@
+    Top 15 Words by Frequency     
+         Target: 'media'          
+            Rank: #861            
+            Count: 367            
+┏━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃ Rank ┃ Word           ┃  Count ┃
+┡━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│    1 │ murkowski      │ 10,337 │
+│    2 │ mikulski       │ 10,133 │
+│    3 │ milepost       │  7,558 │
+│    4 │ medidss        │  6,880 │
+│    5 │ majochi        │  5,882 │
+│    6 │ mph            │  5,876 │
+│    7 │ mcclelend      │  5,565 │
+│    8 │ mukhlesuzzaman │  5,520 │
+│    9 │ medialoft      │  5,512 │
+│   10 │ morontia       │  5,410 │
+│   11 │ motecusuma     │  4,752 │
+│   12 │ mccain         │  4,402 │
+│   13 │ mistrough      │  4,392 │
+│   14 │ mandorallen    │  4,162 │
+│   15 │ mashko         │  3,679 │
+└──────┴────────────────┴────────┘

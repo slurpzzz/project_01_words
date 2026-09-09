@@ -1,0 +1,38 @@
+         Top 30 Words by Frequency         
+               Target: 'fly'               
+                 Rank: #2                  
+               Count: 45,120               
+┏━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃ Rank ┃ Word                    ┃  Count ┃
+┡━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│    1 │ scholarlyeditionstm     │ 78,195 │
+│    2 │ fly                     │ 45,120 │
+│    3 │ scholarlypaper          │ 32,173 │
+│    4 │ gameknight              │ 16,076 │
+│    5 │ vinctalin               │ 14,391 │
+│    6 │ scholarlybrief          │ 12,919 │
+│    7 │ name                    │ 12,900 │
+│    8 │ wileyblackwell          │ 12,268 │
+│    9 │ brand                   │ 11,864 │
+│   10 │ scholarlyeditionsm      │  9,625 │
+│   11 │ appfabric               │  9,596 │
+│   12 │ fished                  │  9,568 │
+│   13 │ emergence               │  9,406 │
+│   14 │ falls                   │  9,400 │
+│   15 │ spanishtranslation      │  8,977 │
+│   16 │ spanjolle               │  8,156 │
+│   17 │ holandeze               │  8,156 │
+│   18 │ gps                     │  7,532 │
+│   19 │ milepost                │  7,520 │
+│   20 │ drainage                │  7,520 │
+│   21 │ duns                    │  7,520 │
+│   22 │ scholarlynews           │  7,412 │
+│   23 │ medidss                 │  6,880 │
+│   24 │ scholarlypapertm        │  6,520 │
+│   25 │ engagedinadministrative │  6,512 │
+│   26 │ mph                     │  5,844 │
+│   27 │ zzzadditional           │  5,764 │
+│   28 │ test                    │  5,651 │
+│   29 │ izraelovi               │  5,390 │
+│   30 │ daolord                 │  5,321 │
+└──────┴─────────────────────────┴────────┘

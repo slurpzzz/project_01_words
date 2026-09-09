@@ -1,0 +1,21 @@
+    Word Velocity Comparison (1985-1990 vs 2000-2005)     
+         Surging Words                 Fading Words        
+ ┏━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓  ┏━━━━━━━━━━━━━┳━━━━━━━━━┓ 
+ ┃ Word          ┃     Change ┃  ┃ Word        ┃  Change ┃ 
+ ┡━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩  ┡━━━━━━━━━━━━━╇━━━━━━━━━┩ 
+ │ mousefur      │ +74464.82% │  │ maribavir   │ -99.02% │ 
+ │ media         │ +28520.84% │  │ musicfile   │ -94.96% │ 
+ │ mdpvs         │ +20424.15% │  │ macmap      │ -93.28% │ 
+ │ mysql         │ +16689.64% │  │ messagelabs │ -92.15% │ 
+ │ machine       │ +15340.19% │  │ menu        │ -89.82% │ 
+ │ movetree      │ +14681.16% │  │ m           │ -77.98% │ 
+ │ mefs          │ +14587.01% │  │ msconfig    │ -54.92% │ 
+ │ mememememe    │ +13080.65% │  │ msg         │ -42.21% │ 
+ │ mount         │  +8844.01% │  │ mm          │ -37.50% │ 
+ │ microcannular │  +8184.98% │  │ max         │ -34.19% │ 
+ │ memcached     │  +7008.14% │  │ message     │ -14.64% │ 
+ │ managerid     │  +6772.77% │  └─────────────┴─────────┘ 
+ │ metareality   │  +5737.14% │                            
+ │ msbuild       │  +5548.85% │                            
+ │ mapbox        │  +4889.82% │                            
+ └───────────────┴────────────┘           
