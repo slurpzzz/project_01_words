@@ -1,0 +1,13 @@
+ Usage: words.py letter-freq [OPTIONS] {filename}                               
+                                                                                
+ Generate the frequency distribution for the total of all letters in all the    
+ words across all years in the unigram.                                         
+                                                                                
+╭─ Arguments ──────────────────────────────────────────────────────────────────╮
+│ *    filename      <str>  a comma separated value unigram file [required]    │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --output  -o        display letter frequencies to standard output            │
+│ --plot    -p        plot letter frequencies using matplotlib                 │
+│ --help              Show this message and exit.                              │
+╰──────────────────────────────────────────────────────────────────────────────╯

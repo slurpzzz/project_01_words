@@ -1,0 +1,17 @@
+ Usage: words.py word-freq [OPTIONS] {word} {filename}                          
+                                                                                
+ Generate and/or plot the popularity of a given word, by rank, over the entire  
+ period of time of the unigram file.                                            
+                                                                                
+╭─ Arguments ──────────────────────────────────────────────────────────────────╮
+│ *    word          <str>  a word to display the overall ranking of           │
+│                           [required]                                         │
+│ *    filename      <str>  a comma separated value unigram file [required]    │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --output  -o      <int>  display the top OUTPUT (#) ranked words by number   │
+│                          of occurrences                                      │
+│ --plot    -p             plot the word rankings from top to bottom based on  │
+│                          occurrences                                         │
+│ --help                   Show this message and exit.                         │
+╰──────────────────────────────────────────────────────────────────────────────╯

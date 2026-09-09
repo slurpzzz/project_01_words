@@ -1,0 +1,14 @@
+ Usage: words.py word-length [OPTIONS] {start} {end} {filename}                 
+                                                                                
+ Generate and/or plot the average word length for a range of years.             
+                                                                                
+╭─ Arguments ──────────────────────────────────────────────────────────────────╮
+│ *    start         <int>  the starting year range [required]                 │
+│ *    end           <int>  the ending year range [required]                   │
+│ *    filename      <str>  a comma separated value unigram file [required]    │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --output  -o        display the average word lengths over years              │
+│ --plot    -p        plot the average word lengths over years                 │
+│ --help              Show this message and exit.                              │
+╰──────────────────────────────────────────────────────────────────────────────╯

@@ -1,0 +1,12 @@
+ Usage: words.py first-appearance [OPTIONS] {word} {threshold} {filename}       
+                                                                                
+ Find the first year a word crossed a specific usage count threshold.           
+                                                                                
+╭─ Arguments ──────────────────────────────────────────────────────────────────╮
+│ *    word           <str>  the word to search for [required]                 │
+│ *    threshold      <int>  the count threshold to cross [required]           │
+│ *    filename       <str>  a comma separated value unigram file [required]   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --help          Show this message and exit.                                  │
+╰──────────────────────────────────────────────────────────────────────────────╯

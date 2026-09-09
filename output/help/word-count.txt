@@ -1,0 +1,12 @@
+ Usage: words.py word-count [OPTIONS] {word} {filename}                         
+                                                                                
+ Generate the total number of occurrences of a word in a unigram file.          
+                                                                                
+╭─ Arguments ──────────────────────────────────────────────────────────────────╮
+│ *    word          <str>  a word to display the total occurrences of         │
+│                           [required]                                         │
+│ *    filename      <str>  a comma separated value unigram file [required]    │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --help          Show this message and exit.                                  │
+╰──────────────────────────────────────────────────────────────────────────────╯

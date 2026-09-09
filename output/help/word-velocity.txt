@@ -1,0 +1,19 @@
+ Usage: words.py word-velocity [OPTIONS] {start1} {end1} {start2} {end2}        
+                               {filename}                                       
+                                                                                
+ Compare word frequencies between two decade ranges to identify surging and     
+ fading words.                                                                  
+                                                                                
+╭─ Arguments ──────────────────────────────────────────────────────────────────╮
+│ *    start1        <int>  start year of first range [required]               │
+│ *    end1          <int>  end year of first range [required]                 │
+│ *    start2        <int>  start year of second range [required]              │
+│ *    end2          <int>  end year of second range [required]                │
+│ *    filename      <str>  a comma separated value unigram file [required]    │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --top        -t      <int>  number of top words [default: 5]                 │
+│ --min-count  -c      <int>  minimum total count threshold across both eras   │
+│                             [default: 50]                                    │
+│ --help                      Show this message and exit.                      │
+╰──────────────────────────────────────────────────────────────────────────────╯
