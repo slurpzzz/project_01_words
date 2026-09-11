@@ -2,44 +2,48 @@
 Typer CLI reference demo for students
 Run with: python3 typer_demo.py --help
 
-Key Features, Mechanics & CLI Examples:
+Key Features & CLI Examples:
 
-  * Command Auto-Naming:
-      Function names in snake_case (e.g., `analyze_text`) automatically map 
-      to POSIX-standard kebab-case CLI commands (`analyze-text`).
+  * Command Auto-Naming (snake_case -> kebab-case):
+      Function names in snake_case notation automatically map to kebab-case CLI commands.
+      Sample: 'send_notice' function becomes 'send-notice' CLI command
       Example CLI Usage:
-        $ python typer_demo.py analyze-text "hello world"
+        $ python typer_demo.py send-notice Alice
 
   * Required Positional Arguments:
-      Mandatory inputs use `typer.Argument(...)`. Failing to pass them exits with an error.
+      Mandatory inputs use `typer.Argument(...)` without a default value.
+      Failing to pass them exits with an error.
       Example CLI Usage:
-        $ python typer_demo.py run-simulation 10
+        $ python typer_demo.py greet Alice
 
-  * Optional Flags with Default Values:
-      Optional inputs use `typer.Option(default_value, ...)`. If omitted, defaults apply.
+  * Optional Positional Arguments:
+      Parameters with default values using typer.Argument(...) become optional positional arguments.
+      Takes an input value. If omitted, the default is used.
       Example CLI Usage:
-        $ python typer_demo.py run-simulation 10 --player-name "Alex"
+        $ python typer_demo.py greet Alice True
 
-  * Short Flag Aliases:
-      Define shorthand flags (e.g., "-m", "--min-length") to support concise typing.
+  * Optional Argument with Short Flag Aliases:
+      Parameters with default values using typer.Option(...) allow defining
+      shorthand flags (e.g., "-p", "--priority") to support concise typing.
       Example CLI Usage:
-        $ python typer_demo.py analyze-text "hello world" -m 4
-        $ python typer_demo.py analyze-text "hello world" --min-length 4
+        $ python typer_demo.py send-notice Alice -p 3
+        $ python typer_demo.py send-notice Alice --priority 3
 
   * Boolean Toggles:
-      Parameters typed as `bool` act as on/off switches (passing the flag sets it to True).
+      Optional parameters typed as `bool` act as on/off switches (passing the flag sets it to True).
       Example CLI Usage:
-        $ python typer_demo.py analyze-text "hello world" -u
-        $ python typer_demo.py run-simulation 10 --double-points
+        $ python typer_demo.py send-notice Alice -u
+        $ python typer_demo.py send-notice Alice --urgent
 
   * Auto-Generated Interactive Help:
       Typer automatically builds help pages from docstrings and `help="..."` parameters.
       Example CLI Usage:
         $ python typer_demo.py --help
-        $ python typer_demo.py analyze-text --help
+        $ python typer_demo.py send-notice --help
 """
 
-import sys
+from typing import Annotated
+
 import typer
 
 app = typer.Typer(
@@ -48,71 +52,41 @@ app = typer.Typer(
 
 
 @app.command()
-def analyze_text(
-    # mandatory positional argument
-    text: str = typer.Argument(
-        ..., 
-        help="The raw text string to analyze"
-    ),
-    # optional integer flag with short alias (-m) and default value
-    min_length: int = typer.Option(
-        3, 
-        "-m", "--min-length", 
-        help="Filter out words shorter than this length"
-    ),
-    # optional boolean flag (-u / --uppercase). Defaults to False.
-    uppercase: bool = typer.Option(
-        False, 
-        "-u", "--uppercase", 
-        help="Convert matching words to uppercase in output"
-    ),
+def greet(
+        # positional argument required (no default value)
+        name: Annotated[str, typer.Argument()],
+        # optional positional argument (has a default value, takes an input value)
+        formal: Annotated[bool, typer.Argument()] = False,
 ) -> None:
-    """
-    Filter and count words from an input string based on minimum length.
-    """
-    words = [w for w in text.split() if len(w) >= min_length]
-
-    if uppercase:
-        words = [w.upper() for w in words]
-
-    print(f"Found {len(words)} word(s) matching criteria:")
-    for w in words:
-        print(f" - {w}")
+    """Greet a person by name."""
+    message = f"Good day, {name}." if formal else f"Hello, {name}!"
+    print(message)
 
 
 @app.command()
-def run_simulation(
-    # mandatory integer argument
-    rounds: int = typer.Argument(
-        ..., 
-        help="Number of simulation rounds to run"
-    ),
-    # optional string option with default value
-    player_name: str = typer.Option(
-        "Hero", 
-        "-p", "--player-name", 
-        help="Name of the player"
-    ),
-    # boolean flag
-    double_points: bool = typer.Option(
-        False, 
-        "-d", "--double-points", 
-        help="Enable 2x point multiplier"
-    ),
+def send_notice(
+        # positional argument required (no default value)
+        username: Annotated[
+            str,
+            typer.Argument(help="Target username (Required)")
+        ],
+        # named optional argument (has default value, takes an input value)
+        priority: Annotated[
+            int,
+            typer.Option("-p", "--priority", help="Priority level 1-5")
+        ] = 1,
+        # boolean optional flag (default False, acts as on/off switch)
+        urgent: Annotated[
+            bool,
+            typer.Option("-u", "--urgent", help="Mark notice as urgent")
+        ] = False,
 ) -> None:
     """
-    Simulate a quick turn-based game scoring routine.
+    Send a notification to a recipient.
+    Prints a prioritized message to the given user applying optional urgency and priority.
     """
-    # input validation check
-    if rounds <= 0:
-        sys.stderr.write("Error: rounds must be a positive integer!\n")
-        raise typer.Exit(code=1)
-
-    multiplier = 2 if double_points else 1
-    total_score = rounds * 10 * multiplier
-
-    print(f"Running {rounds} rounds for {player_name}...")
-    print(f"Final Score: {total_score}")
+    notice_type = "URGENT NOTICE" if urgent else "Standard Notice"
+    print(f"[{notice_type}] Priority {priority} -> Sent to user: {username}")
 
 
 if __name__ == "__main__":
