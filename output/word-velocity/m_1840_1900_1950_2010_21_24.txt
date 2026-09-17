@@ -1,0 +1,27 @@
+      Word Velocity Comparison (1840-1900 vs 1950-2010)      
+        Surging Words                  Fading Words          
+ ┏━━━━━━━━━━━━━┳━━━━━━━━━━━━┓  ┏━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓ 
+ ┃ Word        ┃     Change ┃  ┃ Word            ┃  Change ┃ 
+ ┡━━━━━━━━━━━━━╇━━━━━━━━━━━━┩  ┡━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩ 
+ │ mod         │ +10701.56% │  │ mouseevent      │ -80.22% │ 
+ │ mouse       │  +3908.79% │  │ msgbox          │ -64.39% │ 
+ │ max         │  +3647.59% │  │ machr           │ -61.00% │ 
+ │ min         │  +2787.33% │  │ metabase        │ -46.31% │ 
+ │ my          │  +1643.84% │  │ mobileme        │ -44.72% │ 
+ │ mysql       │  +1391.46% │  │ messageboxicon  │ -43.22% │ 
+ │ media       │   +871.00% │  │ microirrigation │ -42.04% │ 
+ │ message     │   +782.66% │  │ middle          │ -41.51% │ 
+ │ make        │   +753.21% │  │ menovshchikov   │ -40.55% │ 
+ │ manshankar  │   +743.10% │  │ myprogram       │ -37.84% │ 
+ │ method      │   +680.97% │  │ michael         │ -35.60% │ 
+ │ medicare    │   +634.20% │  │ myristylation   │ -31.30% │ 
+ │ map         │   +598.65% │  │ multiprotocol   │ -30.20% │ 
+ │ magic       │   +544.03% │  │ microbios       │ -29.50% │ 
+ │ module      │   +474.80% │  │ myconn          │ -17.20% │ 
+ │ main        │   +469.97% │  │ maxlength       │ -12.18% │ 
+ │ metrizamide │   +435.04% │  │ metronidazole   │ -11.21% │ 
+ │ m           │   +384.75% │  │ mousedown       │ -10.25% │ 
+ │ month       │   +363.70% │  │ melphalan       │  -7.26% │ 
+ │ mydata      │   +347.14% │  │ mutex           │  -1.94% │ 
+ │ methodology │   +345.16% │  │ mousex          │  -1.91% │ 
+ └─────────────┴────────────┘  └─────────────────┴─────────┘ 

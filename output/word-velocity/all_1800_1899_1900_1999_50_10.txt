@@ -1,0 +1,56 @@
+       Word Velocity Comparison (1800-1899 vs 1900-1999)       
+          Surging Words                   Fading Words         
+ ┏━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓  ┏━━━━━━━━━━━━━━━━┳━━━━━━━━━┓ 
+ ┃ Word           ┃     Change ┃  ┃ Word           ┃  Change ┃ 
+ ┡━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩  ┡━━━━━━━━━━━━━━━━╇━━━━━━━━━┩ 
+ │ popsci         │ +89286.02% │  │ babbalanja     │ -99.26% │ 
+ │ subprogramme   │ +82787.55% │  │ occludent      │ -99.18% │ 
+ │ spie           │ +46600.38% │  │ nabokov        │ -99.07% │ 
+ │ wm             │ +36151.16% │  │ hrprs          │ -98.83% │ 
+ │ frcrp          │ +21377.67% │  │ upround        │ -98.54% │ 
+ │ nethlds        │ +19509.18% │  │ tabulatable    │ -98.41% │ 
+ │ sharshulle     │ +18812.41% │  │ remarketing    │ -98.22% │ 
+ │ noerr          │ +17902.34% │  │ multivariable  │ -98.14% │ 
+ │ max            │ +16949.61% │  │ referrals      │ -98.08% │ 
+ │ negl           │ +16187.21% │  │ kerotest       │ -97.96% │ 
+ │ appendixes     │ +15700.77% │  │ cpff           │ -97.93% │ 
+ │ golfdom        │ +14390.03% │  │ psychoses      │ -97.91% │ 
+ │ hochberg       │ +13266.67% │  │ discriminatees │ -97.79% │ 
+ │ rmsa           │ +12778.24% │  │ yankwich       │ -97.79% │ 
+ │ kleonike       │ +11174.32% │  │ playground     │ -97.64% │ 
+ │ decodification │ +10541.19% │  │ wesberry       │ -97.51% │ 
+ │ gl             │  +9866.26% │  │ sinyor         │ -97.45% │ 
+ │ sql            │  +9526.22% │  │ lefthander     │ -97.43% │ 
+ │ phthalanilide  │  +9344.36% │  │ byep           │ -97.38% │ 
+ │ tokushu        │  +8987.78% │  │ midamerica     │ -97.34% │ 
+ │ pinchwife      │  +8552.24% │  │ ashwander      │ -97.19% │ 
+ │ willumeit      │  +8449.69% │  │ kassal         │ -97.11% │ 
+ │ sadomba        │  +8147.52% │  │ tetracyclines  │ -97.06% │ 
+ │ lubanga        │  +8123.82% │  │ afroamerican   │ -97.04% │ 
+ │ pdcittiya      │  +8062.20% │  │ thermosiphon   │ -96.97% │ 
+ │ db             │  +7754.38% │  │ dickstein      │ -96.95% │ 
+ │ radost         │  +7607.16% │  │ hufstedler     │ -96.90% │ 
+ │ hange          │  +7359.96% │  │ ngatapa        │ -96.85% │ 
+ │ extravehicular │  +7311.05% │  │ ketubah        │ -96.78% │ 
+ │ sp             │  +7142.65% │  │ aleksey        │ -96.74% │ 
+ │ mod            │  +6861.80% │  │ be             │ -96.74% │ 
+ │ qibs           │  +6601.11% │  │ lovborg        │ -96.65% │ 
+ │ arnolphe       │  +6583.33% │  │ fosfomycin     │ -96.30% │ 
+ │ encla          │  +6469.57% │  │ wppss          │ -96.27% │ 
+ │ nonoperatives  │  +6375.96% │  │ an             │ -96.24% │ 
+ │ bhosh          │  +6339.56% │  │ electrofax     │ -96.24% │ 
+ │ centrodorsal   │  +6263.39% │  │ cplr           │ -96.20% │ 
+ │ user           │  +6082.55% │  │ airfare        │ -96.09% │ 
+ │ emp            │  +5851.01% │  │ adillah        │ -96.06% │ 
+ │ ipms           │  +5697.33% │  │ birkebeiners   │ -95.99% │ 
+ │ mitkhal        │  +5620.53% │  │ heikkila       │ -95.96% │ 
+ │ biedenweg      │  +5474.18% │  │ ghayoor        │ -95.95% │ 
+ │ faleomavaega   │  +5445.74% │  │ orkest         │ -95.88% │ 
+ │ liivoja        │  +5425.43% │  │ autodesk       │ -95.87% │ 
+ │ daddario       │  +5331.99% │  │ that           │ -95.83% │ 
+ │ gdss           │  +5289.33% │  │ multispecialty │ -95.72% │ 
+ │ parshas        │  +5285.77% │  │ slidably       │ -95.69% │ 
+ │ http           │  +5196.90% │  │ naimark        │ -95.69% │ 
+ │ hlth           │  +5148.42% │  │ the            │ -95.65% │ 
+ │ bompensiero    │  +5132.91% │  │ laluc          │ -95.57% │ 
+ └────────────────┴────────────┘  └────────────────┴─────────┘

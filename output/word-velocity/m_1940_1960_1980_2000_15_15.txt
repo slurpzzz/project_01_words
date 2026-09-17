@@ -1,0 +1,21 @@
+         Word Velocity Comparison (1940-1960 vs 1980-2000)          
+             Surging Words                      Fading Words        
+ ┏━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┓  ┏━━━━━━━━━━━━━━┳━━━━━━━━━┓ 
+ ┃ Word                   ┃    Change ┃  ┃ Word         ┃  Change ┃ 
+ ┡━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━┩  ┡━━━━━━━━━━━━━━╇━━━━━━━━━┩ 
+ │ m                      │ +9597.88% │  │ metapath     │ -79.80% │ 
+ │ mnnimo                 │ +4320.08% │  │ modvat       │ -75.86% │ 
+ │ microcase              │ +1953.53% │  │ mypyramid    │ -72.36% │ 
+ │ megaplus               │  +291.96% │  │ mastersizer  │ -71.47% │ 
+ │ microcompatibles       │  +274.92% │  │ mcleodusa    │ -68.84% │ 
+ │ magicolor              │  +191.60% │  │ maxzide      │ -63.79% │ 
+ │ microfinance           │  +188.71% │  │ mesalamine   │ -58.61% │ 
+ │ muniyield              │  +156.14% │  │ masterguard  │ -56.62% │ 
+ │ mobilecomm             │  +108.09% │  │ metrocard    │ -55.04% │ 
+ │ multidomestic          │  +104.50% │  │ medicopharma │ -47.87% │ 
+ │ mcralx                 │   +90.87% │  │ milosevic    │ -47.74% │ 
+ │ microelectromechanical │   +81.78% │  │ microburst   │ -12.04% │ 
+ │ maplist                │   +63.60% │  └──────────────┴─────────┘ 
+ │ management             │   +53.38% │                             
+ │ megasys                │   +53.38% │                             
+ └────────────────────────┴───────────┘ 

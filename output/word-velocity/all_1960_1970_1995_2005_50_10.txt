@@ -1,0 +1,56 @@
+           Word Velocity Comparison (1960-1970 vs 1995-2005)           
+             Surging Words                       Fading Words          
+ ┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓  ┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┓ 
+ ┃ Word                 ┃     Change ┃  ┃ Word             ┃  Change ┃ 
+ ┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩  ┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━┩ 
+ │ db                   │ +21357.05% │  │ prpres           │ -96.51% │ 
+ │ page                 │  +8610.52% │  │ maxsat           │ -87.21% │ 
+ │ get                  │  +7043.74% │  │ datafld          │ -83.21% │ 
+ │ user                 │  +6102.06% │  │ euforic          │ -75.82% │ 
+ │ no                   │  +5596.13% │  │ umbrisols        │ -74.16% │ 
+ │ key                  │  +4318.95% │  │ computers        │ -73.37% │ 
+ │ dbtype               │  +4305.48% │  │ rrmse            │ -73.06% │ 
+ │ matsurv              │  +4116.86% │  │ autoresponder    │ -72.30% │ 
+ │ polylens             │  +4018.07% │  │ avective         │ -71.71% │ 
+ │ date                 │  +3792.30% │  │ pronival         │ -70.36% │ 
+ │ news                 │  +3785.44% │  │ ndsos            │ -70.17% │ 
+ │ state                │  +3338.57% │  │ euromet          │ -67.48% │ 
+ │ s                    │  +3295.05% │  │ tsunameter       │ -64.63% │ 
+ │ min                  │  +3004.87% │  │ peroxins         │ -62.95% │ 
+ │ ramsheth             │  +2766.93% │  │ msource          │ -62.28% │ 
+ │ method               │  +2454.86% │  │ pointlights      │ -54.47% │ 
+ │ max                  │  +2441.79% │  │ neuroemergencies │ -52.85% │ 
+ │ earthgov             │  +2163.36% │  │ geldanamycin     │ -50.60% │ 
+ │ d                    │  +2061.80% │  │ interniche       │ -44.80% │ 
+ │ adprep               │  +2032.79% │  │ onwarning        │ -42.84% │ 
+ │ servicesincidentalto │  +2028.64% │  │ environment      │ -41.06% │ 
+ │ camshift             │  +2006.19% │  │ statlink         │ -40.78% │ 
+ │ file                 │  +1966.89% │  │ mhz              │ -28.46% │ 
+ │ soygold              │  +1961.28% │  │ ismrm            │ -21.41% │ 
+ │ content              │  +1899.31% │  │ cust             │ -20.58% │ 
+ │ spatial              │  +1713.59% │  │ vgrf             │ -19.17% │ 
+ │ qtcb                 │  +1710.69% │  │ format           │ -18.27% │ 
+ │ sanparks             │  +1597.52% │  │ interpassive     │ -13.55% │ 
+ │ prefactoring         │  +1563.23% │  │ mudpit           │ -11.59% │ 
+ │ time                 │  +1505.41% │  │ bepposax         │  -9.79% │ 
+ │ list                 │  +1494.64% │  │ powerpad         │  -5.69% │ 
+ │ daunorubicin         │  +1278.33% │  │ htert            │  -4.04% │ 
+ │ type                 │  +1259.32% │  │ digital          │  -3.28% │ 
+ │ chapter              │  +1243.87% │  └──────────────────┴─────────┘ 
+ │ annelise             │  +1201.43% │                                 
+ │ unit                 │  +1065.98% │                                 
+ │ execute              │  +1063.12% │                                 
+ │ data                 │  +1020.90% │                                 
+ │ learning             │  +1001.90% │                                 
+ │ getfd                │  +1001.50% │                                 
+ │ omalizumab           │   +993.96% │                                 
+ │ crossgrid            │   +963.10% │                                 
+ │ biosuit              │   +956.24% │                                 
+ │ image                │   +956.24% │                                 
+ │ introduction         │   +950.85% │                                 
+ │ krsulic              │   +905.94% │                                 
+ │ url                  │   +843.07% │                                 
+ │ agrisolutions        │   +843.07% │                                 
+ │ v                    │   +795.92% │                                 
+ │ id                   │   +767.62% │                                 
+ └──────────────────────┴────────────┘  
