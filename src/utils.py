@@ -2,7 +2,7 @@ import csv
 import sys
 
 
-def load_unigram(filename) -> dict[str, dict[int, int]] | None:
+def load_unigram(filename) -> dict[str, dict[int, int]]:
     try:
         with open(filename) as file:
             reader = csv.reader(file)
@@ -19,4 +19,4 @@ def load_unigram(filename) -> dict[str, dict[int, int]] | None:
             return unigram
     except (FileNotFoundError, PermissionError):
         print(f'{filename} does not exist!', file=sys.stderr)
-    return None
+    sys.exit()

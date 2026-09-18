@@ -5,7 +5,7 @@ Author: Justin Spadone
 Main program for the words project.
 """
 from typing import Annotated
-from utils import load_unigram
+from utils import *
 import typer
 import sys
 
@@ -29,8 +29,16 @@ def first_appearance(word: Annotated[str, typer.Argument(help='the word to searc
                      threshold: Annotated[int, typer.Argument(help='the count threshold to cross')],
                      filename: Annotated[str, typer.Argument(help='a comma separated value unigram file')]) -> None:
     """ Find the first year a word crossed a specific usage count threshold."""
-    return None
-
+    unigram = load_unigram(filename)
+    first_year = None
+    if word in unigram:
+        for year, count in unigram[word].items():
+            if count >= threshold and (first_year is None or year < first_year):
+                first_year = year
+    if first_year is None:
+        print(f"'{word}' never reached a count of {threshold} in {filename}")
+    else:
+        print(f"'{word}' first reached {threshold} in {first_year}")
 
 @app.command()
 def letter_freq(filename: Annotated[str, typer.Argument(help='a comma separated value unigram file')],
