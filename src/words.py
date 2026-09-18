@@ -4,10 +4,11 @@ Author: Justin Spadone
 
 Main program for the words project.
 """
-from typing import Annotated
-from utils import *
-import typer
 import sys
+import matplotlib.pyplot as plt
+from typing import Annotated
+import typer
+from utils import *
 
 app = typer.Typer(help="CSAPX Project 1: Words - A unified CLI for unigram analysis.")
 
@@ -40,6 +41,7 @@ def first_appearance(word: Annotated[str, typer.Argument(help='the word to searc
     else:
         print(f"'{word}' first reached {threshold} in {first_year}")
 
+
 @app.command()
 def letter_freq(filename: Annotated[str, typer.Argument(help='a comma separated value unigram file')],
                 output: Annotated[bool, typer.Option('-o', '--output',
@@ -48,7 +50,29 @@ def letter_freq(filename: Annotated[str, typer.Argument(help='a comma separated 
                     bool, typer.Option('-p', '--plot',
                                        help='plot letter frequencies using matplotlib')] = False) -> None:
     """Generate the frequency distribution for the total of all letters in all the words across all years in the unigram."""
-    return None
+    unigram = load_unigram(filename)
+    letter_counts = {}
+    for word in unigram:
+        word_total = sum(unigram[word].values())
+        for letter in word:
+            if letter not in letter_counts:
+                letter_counts[letter] = word_total
+            else:
+                letter_counts[letter] += word_total
+    total_letters = sum(letter_counts.values())
+    letter_freqs = {}
+    for letter in letter_counts:
+        letter_freqs[letter] = letter_counts[letter] / total_letters
+    letter_freqs_sorted = sorted(letter_freqs)
+    if output:
+        for letter in letter_freqs_sorted:
+            print(f'{letter}: {letter_freqs[letter]}')
+    if plot:
+        plt.bar(letter_freqs_sorted, [letter_freqs[letter] for letter in letter_freqs_sorted])
+        plt.title(f'Letter Frequencies: {filename}')
+        plt.xlabel('Letter')
+        plt.ylabel('Frequency')
+        plt.show()
 
 
 @app.command()
