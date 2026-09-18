@@ -7,6 +7,7 @@ Main program for the words project.
 from typing import Annotated
 from utils import load_unigram
 import typer
+import sys
 
 app = typer.Typer(help="CSAPX Project 1: Words - A unified CLI for unigram analysis.")
 
@@ -16,7 +17,11 @@ def word_count(word: Annotated[str, typer.Argument(help='a word to display the t
                filename: Annotated[str, typer.Argument(help='a comma separated value unigram file')]) -> None:
     """Generate the total number of occurrences of a word in a unigram file."""
     unigram = load_unigram(filename)
-    if unigram is not None: print(unigram)
+    if word not in unigram:
+        print(f'Error: {word} does not appear!', file=sys.stderr)
+        return
+    count = sum(unigram[word].values())
+    print(f'{word}: {count}')
 
 
 @app.command()
