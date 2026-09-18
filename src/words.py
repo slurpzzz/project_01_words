@@ -1,10 +1,11 @@
 """
 CSAPX Project1: Words
-Author: YOUR NAME HERE
+Author: Justin Spadone
 
 Main program for the words project.
 """
 from typing import Annotated
+from utils import load_unigram
 import typer
 
 app = typer.Typer(help="CSAPX Project 1: Words - A unified CLI for unigram analysis.")
@@ -14,7 +15,8 @@ app = typer.Typer(help="CSAPX Project 1: Words - A unified CLI for unigram analy
 def word_count(word: Annotated[str, typer.Argument(help='a word to display the total occurrences of')],
                filename: Annotated[str, typer.Argument(help='a comma separated value unigram file')]) -> None:
     """Generate the total number of occurrences of a word in a unigram file."""
-    return None
+    unigram = load_unigram(filename)
+    if unigram is not None: print(unigram)
 
 
 @app.command()
