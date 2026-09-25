@@ -4,11 +4,15 @@ Author: Justin Spadone
 
 Main program for the words project.
 """
-import sys
-import matplotlib.pyplot as plt
-from typing import Annotated
 from collections import defaultdict
+from typing import Annotated
+
+import matplotlib.pyplot as plt
 import typer
+from rich.columns import Columns
+from rich.console import Console
+from rich.table import Table
+
 from utils import *
 
 app = typer.Typer(help="CSAPX Project 1: Words - A unified CLI for unigram analysis.")
@@ -124,7 +128,67 @@ def word_velocity(start1: Annotated[int, typer.Argument(help='start year of firs
                   min_count: Annotated[int, typer.Option('-c', '--min-count',
                                                          help='minimum total count threshold across both eras')] = 50) -> None:
     """Compare word frequencies between two decade ranges to identify surging and fading words."""
-    return None
+    if start1 > end1 or start2 > end2:
+        print('Error: Start years must be less than or equal to end years', file=sys.stderr)
+        sys.exit(1)
+    unigram = load_unigram(filename)
+    c1 = 0
+    c2 = 0
+    era1_word_counts = defaultdict(int)
+    era2_word_counts = defaultdict(int)
+    era1_word_freqs = {}
+    era2_word_freqs = {}
+    era1_total_words = 0
+    era2_total_words = 0
+    for word in unigram:
+        for year, occurrences in unigram[word].items():
+            if start1 <= year <= end1:
+                era1_word_counts[word] += occurrences
+                era1_total_words += occurrences
+            if start2 <= year <= end2:
+                era2_word_counts[word] += occurrences
+                era2_total_words += occurrences
+
+    era1_word_counts = {k: v for k, v in era1_word_counts.items() if v >= min_count}
+    era2_word_counts = {k: v for k, v in era2_word_counts.items() if v >= min_count}
+
+    for word in era1_word_counts:
+        era1_word_freqs[word] = era1_word_counts[word] / era1_total_words
+    for word in era2_word_counts:
+        era2_word_freqs[word] = era2_word_counts[word] / era2_total_words
+    word_velocities = {}
+    for word in era1_word_freqs:
+        if word in era2_word_freqs:
+            f1 = era1_word_freqs[word]
+            f2 = era2_word_freqs[word]
+            word_velocities[word] = (f2 - f1) / f1
+
+    print_table(word_velocities, start1, end1, start2, end2, top)
+
+
+def print_table(word_velocities, start1, end1, start2, end2, top):
+    console = Console()
+    surging_table = Table(title='Surging Words')
+    fading_table = Table(title='Fading Words')
+    surging_table.add_column('Word')
+    surging_table.add_column('Change')
+    fading_table.add_column('Word')
+    fading_table.add_column('Change')
+    surging_velocities = {}
+    fading_velocities = {}
+    for word, change in word_velocities.items():
+        if change > 0:
+            surging_velocities[word] = change
+        elif change < 0:
+            fading_velocities[word] = change
+    for word, change in sorted(surging_velocities.items(), key=lambda entry: entry[1], reverse=True)[:top]:
+        surging_table.add_row(word, f'+{change:.2%}')
+
+    for word, change in sorted(fading_velocities.items(), key=lambda entry: entry[1])[:top]:
+        fading_table.add_row(word, f'{change:.2%}')
+    side_by_side = Columns([surging_table, fading_table],
+                           title=f'Word Velocity Comparison ({start1}-{end1} vs {start2}-{end2})')
+    console.print(side_by_side)
 
 
 @app.command()
