@@ -19,4 +19,4 @@ def load_unigram(filename) -> dict[str, dict[int, int]]:
             return unigram
     except (FileNotFoundError, PermissionError):
         print(f'{filename} does not exist!', file=sys.stderr)
-    sys.exit()
+    sys.exit(1)

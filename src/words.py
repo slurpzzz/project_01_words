@@ -7,6 +7,7 @@ Main program for the words project.
 import sys
 import matplotlib.pyplot as plt
 from typing import Annotated
+from collections import defaultdict
 import typer
 from utils import *
 
@@ -30,6 +31,7 @@ def first_appearance(word: Annotated[str, typer.Argument(help='the word to searc
                      threshold: Annotated[int, typer.Argument(help='the count threshold to cross')],
                      filename: Annotated[str, typer.Argument(help='a comma separated value unigram file')]) -> None:
     """ Find the first year a word crossed a specific usage count threshold."""
+
     unigram = load_unigram(filename)
     first_year = None
     if word in unigram:
@@ -84,7 +86,32 @@ def word_length(start: Annotated[int, typer.Argument(help='the starting year ran
                 plot: Annotated[bool, typer.Option('-p', '--plot',
                                                    help='plot the average word lengths over years')] = False) -> None:
     """Generate and/or plot the average word length for a range of years."""
-    return None
+    if not output and not plot:
+        return
+    unigram = load_unigram(filename)
+    if start > end:
+        print('Error: start year must be less than or equal to end year!', file=sys.stderr)
+        sys.exit(1)
+    year_chars = defaultdict(int)
+    year_words = defaultdict(int)
+    for word in unigram:
+        w_len = len(word)
+        for year, occurrences in unigram[word].items():
+            if year < start or year > end:
+                continue
+            year_chars[year] += w_len * occurrences
+            year_words[year] += occurrences
+    year_lengths = {}
+    for year in sorted(year_words):
+        year_lengths[year] = year_chars[year] / year_words[year]
+        if output:
+            print(f'{year}: {year_lengths[year]}')
+    if plot:
+        plt.plot(year_lengths.keys(), year_lengths.values())
+        plt.title(f'Average word lengths from {start} to {end}: {filename}')
+        plt.xlabel('Year')
+        plt.ylabel('Average word length')
+        plt.show()
 
 
 @app.command()
