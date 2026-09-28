@@ -171,9 +171,9 @@ def print_table(word_velocities, start1, end1, start2, end2, top):
     surging_table = Table(title='Surging Words')
     fading_table = Table(title='Fading Words')
     surging_table.add_column('Word')
-    surging_table.add_column('Change')
+    surging_table.add_column('Change', justify='right')
     fading_table.add_column('Word')
-    fading_table.add_column('Change')
+    fading_table.add_column('Change', justify='right')
     surging_velocities = {}
     fading_velocities = {}
     for word, change in word_velocities.items():
