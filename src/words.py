@@ -200,7 +200,28 @@ def word_freq(word: Annotated[str, typer.Argument(help='a word to display the ov
               plot: Annotated[bool, typer.Option('-p', '--plot',
                                                  help='plot the word rankings from top to bottom based on occurrences')] = False) -> None:
     """Generate and/or plot the popularity of a given word, by rank, over the entire period of time of the unigram file."""
-    return None
+    unigram = load_unigram(filename)
+    if word not in unigram:
+        print(f'Error: {word} does not appear in {filename}', file=sys.stderr)
+        return
+    word_occurrences = {}
+    for w in unigram:
+        word_occurrences[w] = sum(unigram[w].values())
+    sorted_word_occurrences = sorted(word_occurrences.items(), key=lambda item: item[1], reverse=True)
+    word_ranks = {key[0]: rank for rank, key in enumerate(sorted_word_occurrences, start=1)}
+    console = Console()
+    table = Table()
+    table.add_column('Rank', justify='right')
+    table.add_column('Word')
+    table.add_column('Count', justify='right')
+    for w, rank in word_ranks.items():
+        if rank <= output:
+            table.add_row(f'{rank}', w, f'{word_occurrences[w]:,}')
+    console.print(f'Top {output} Words by Frequency', justify='center')
+    console.print(f"Target: '{word}'", justify='center')
+    console.print(f'Rank: #{word_ranks[word]}', justify='center')
+    console.print(f'Count: {word_occurrences[word]:,}', justify='center')
+    console.print(table)
 
 
 if __name__ == "__main__":
