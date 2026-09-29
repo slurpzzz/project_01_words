@@ -5,6 +5,7 @@ Author: Justin Spadone
 Main program for the words project.
 """
 from collections import defaultdict
+from operator import itemgetter
 from typing import Annotated
 
 import matplotlib.pyplot as plt
@@ -181,10 +182,10 @@ def print_table(word_velocities, start1, end1, start2, end2, top):
             surging_velocities[word] = change
         elif change < 0:
             fading_velocities[word] = change
-    for word, change in sorted(surging_velocities.items(), key=lambda entry: entry[1], reverse=True)[:top]:
+    for word, change in sorted(surging_velocities.items(), key=itemgetter(1), reverse=True)[:top]:
         surging_table.add_row(word, f'+{change:.2%}')
 
-    for word, change in sorted(fading_velocities.items(), key=lambda entry: entry[1])[:top]:
+    for word, change in sorted(fading_velocities.items(), key=itemgetter(1))[:top]:
         fading_table.add_row(word, f'{change:.2%}')
     side_by_side = Columns([surging_table, fading_table],
                            title=f'Word Velocity Comparison ({start1}-{end1} vs {start2}-{end2})')
@@ -207,7 +208,7 @@ def word_freq(word: Annotated[str, typer.Argument(help='a word to display the ov
     word_occurrences = {}
     for w in unigram:
         word_occurrences[w] = sum(unigram[w].values())
-    sorted_word_occurrences = sorted(word_occurrences.items(), key=lambda item: item[1], reverse=True)
+    sorted_word_occurrences = sorted(word_occurrences.items(), key=itemgetter(1), reverse=True)
     word_ranks = {key[0]: rank for rank, key in enumerate(sorted_word_occurrences, start=1)}
     console = Console()
     table = Table()
@@ -233,7 +234,6 @@ def word_freq(word: Annotated[str, typer.Argument(help='a word to display the ov
     plt.xlabel(f'Rank of word ("{word}" is rank {word_ranks[word]})')
     plt.ylabel(f'Total number of occurrences')
     plt.show()
-    # consider replace key=lambda whatever with itemgetter
 
 
 if __name__ == "__main__":
