@@ -222,6 +222,18 @@ def word_freq(word: Annotated[str, typer.Argument(help='a word to display the ov
     console.print(f'Rank: #{word_ranks[word]}', justify='center')
     console.print(f'Count: {word_occurrences[word]:,}', justify='center')
     console.print(table)
+    if not plot:
+        return
+    plt.loglog([rank for rank in word_ranks.values()], [word_occurrences[w] for w in word_ranks.keys()])
+    plt.plot(word_ranks[word], word_occurrences[word], marker='*', color='red', markersize=15)
+    plt.text(word_ranks[word] + 1, word_occurrences[word] + 5, s=word, fontsize=12, verticalalignment='bottom',
+             horizontalalignment='left')
+
+    plt.title(f'Word Frequencies: {filename}')
+    plt.xlabel(f'Rank of word ("{word}" is rank {word_ranks[word]})')
+    plt.ylabel(f'Total number of occurrences')
+    plt.show()
+    # consider replace key=lambda whatever with itemgetter
 
 
 if __name__ == "__main__":
