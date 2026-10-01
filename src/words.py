@@ -25,7 +25,7 @@ def word_count(word: Annotated[str, typer.Argument(help='a word to display the t
     """Generate the total number of occurrences of a word in a unigram file."""
     unigram = load_unigram(filename)
     if word not in unigram:
-        print(f'Error: {word} does not appear!', file=sys.stderr)
+        print(f'Error: {word} does not appear in {filename}', file=sys.stderr)
         return
     count = sum(unigram[word].values())
     print(f'{word}: {count}')
@@ -167,7 +167,17 @@ def word_velocity(start1: Annotated[int, typer.Argument(help='start year of firs
     print_table(word_velocities, start1, end1, start2, end2, top)
 
 
-def print_table(word_velocities, start1, end1, start2, end2, top):
+def print_table(word_velocities, start1, end1, start2, end2, top) -> None:
+    """
+    Prints a rich table of surging and fading words
+    :param word_velocities: The dictionary of word velocities
+    :param start1: Starting year of range 1
+    :param end1: Ending year of range 1
+    :param start2: Starting year of range 2
+    :param end2: Ending year of range 2
+    :param top: The number of top surging and fading words to populate into the table
+    :return: None
+    """
     console = Console()
     surging_table = Table(title='Surging Words')
     fading_table = Table(title='Fading Words')

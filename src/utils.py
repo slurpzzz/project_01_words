@@ -3,6 +3,11 @@ import sys
 
 
 def load_unigram(filename) -> dict[str, dict[int, int]]:
+    """
+    Load a file into a nested dictionary of string to dictionary of int to int
+    :param filename: The path and name of the file
+    :return: The dictionary
+    """
     try:
         with open(filename) as file:
             reader = csv.reader(file)
